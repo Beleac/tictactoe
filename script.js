@@ -34,6 +34,9 @@ console.log($td)
 
    }
 
+   var xwin1 = numbers.filter(XPlacement <= 3);
+   alert(xwin1);
+   
 
    });
 
