@@ -17,36 +17,56 @@
 
 </head>
 
+  
 <body>
-    <h1>Tic Tac Toe</h1>
+    <header>
+        <div>
 
-    <section class= "wholeGrid">
+                <p class = "points">Player X Wins</p>
 
-            <table>
+                <p class = "points" id = "XPoints">0</p>
+        </div>
 
-                    <tr>
-                        <td class="cell" id="0" ></td>
-                        <td class="cell" id="1"></td>
-                        <td class="cell" id="2"></td>
-                    </tr>
-                    <tr>
-                        <td class="cell" id="3"></td>
-                        <td class="cell" id="4"></td>
-                        <td class="cell" id="5"></td>
-                    </tr>
-                    <tr>
-                        <td class="cell" id="6"></td>
-                        <td class="cell" id="7"></td>
-                        <td class="cell" id="8"></td>
-                    </tr>
+                <h1>Tic Tac Toe</h1>
 
-                </table>
+        <div>
 
-                <div class="endgame">
+                <p class = "points">Player O Wins</p>
+
+                <p class = "points" id = "OPoints">0</p>
+        </div>
+    </header>   
+
+    
+    <section id="gameboard">
+        <table id= "table">
+
+            <tr>
+                <td class="cell" id=0 ></td>
+                <td class="cell" id=1></td>
+                <td class="cell" id=2></td>
+            </tr>
+            <tr>
+                <td class="cell" id=3></td>
+                <td class="cell" id=4></td>
+                <td class="cell" id=5></td>
+            </tr>
+            <tr>
+                <td class="cell" id=6></td>
+                <td class="cell" id=7></td>
+                <td class="cell" id=8></td>
+            </tr>
+
+        </table>
+    </section>
+
+                <!-- <div class="endgame">
                         <div class="text"></div>
-                    </div>
+                    </div> -->
 
-</section>
+    <footer>
+        <a onclick="reset()">Reset</a>
+    </footer>
 
 </body>
 

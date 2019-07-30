@@ -1,3 +1,11 @@
+header{
+	display: flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content: center;
+
+}
+
 body{
 	display: flex;
 	flex-direction:column;
@@ -17,7 +25,7 @@ td {
 	height:  100px;
 	width:  100px;
 	text-align:  center;
-	vertical-align:  middle;
+	/* vertical-align:  middle; */
 	font-family:  "Comic Sans MS", cursive, sans-serif;
 	font-size:  70px;
 	cursor: pointer;
@@ -25,11 +33,11 @@ td {
 
 table {
 	border-collapse: collapse;
-	position: absolute;
+	/* position: absolute; */
 	left: 50%;
-	margin-left: -155px;
+	/* margin-left: -155px; */
 	top: 50px;
-	margin-top:100px;
+	/* margin-top:100px; */
 }
 
 table tr:first-child td {
@@ -48,7 +56,7 @@ table tr td:last-child {
 	border-right: 0;
 }
 
-.endgame {
+/* .endgame {
   display: none;
   width: 200px;
   top: 120px;
@@ -62,8 +70,47 @@ table tr td:last-child {
   border-radius: 5px;
   color: white;
   font-size: 2em;
-}
+} */
 
 table tr:last-child td{
     border-left: 0;
+}
+
+a{
+padding:5px;
+border:rgb(16, 117, 212) 5px solid;
+background:rgb(9, 224, 177) ;
+height: 30px;
+width: 135px;
+font-size:50px;
+font-family: 'Alegreya SC', serif;
+color: rgb(44, 149, 18);
+text-decoration: none;
+cursor: pointer;
+}
+
+.points{
+text-align: center;
+padding:5px;
+height: 50px;
+width: 100px;
+font-size:20px;
+font-family: 'Alegreya SC', serif;
+color: rgb(44, 149, 18);
+text-decoration: none;
+margin:0px 10px ;
+}
+
+#XPoints{
+	margin:-20px 10px;
+	font-size:40px;
+}
+
+#OPoints{
+	margin:-20px 10px;
+	font-size:40px;
+}
+
+#gameboard {
+	margin: 50px;
 }
