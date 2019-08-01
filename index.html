@@ -37,7 +37,15 @@
         </div>
     </header>   
 
+    <h1 id="turn">Player X Turn</h1>
+
+    <main>
+
+        <img id = "joker1" STYLE = "position:absolute; TOP: 150px; LEFT : 100px" src= "./assets/LegoJokerFace.png">
+        <img id = "joker2" STYLE = "position:absolute; TOP: 150px; LEFT : 900px" src= "./assets/LegoJokerFace.png">
     
+    </main>
+
     <section id="gameboard">
         <table id= "table">
 
@@ -60,12 +68,9 @@
         </table>
     </section>
 
-                <!-- <div class="endgame">
-                        <div class="text"></div>
-                    </div> -->
-
     <footer>
-        <a onclick="reset()">Reset</a>
+        <a class = "buttons" id= "reset"onclick="reset()">Reset</a>
+        <a class = "buttons"id= "resetScore" onclick="resetScore()">Reset Wins</a>
     </footer>
 
 </body>

@@ -11,6 +11,7 @@ body{
 	flex-direction:column;
 	align-items:center;
 	justify-content: center;
+	background:rgb(0, 0, 0);
 }
 
 h1{
@@ -20,8 +21,14 @@ color: rgb(114, 36, 159);
 
 }
 
+#turn{
+	font-size:30px;
+	margin:0px
+
+}
+
 td {
-	border:  5px solid #333;
+	border:  5px solid rgb(0, 253, 34);
 	height:  100px;
 	width:  100px;
 	text-align:  center;
@@ -29,6 +36,7 @@ td {
 	font-family:  "Comic Sans MS", cursive, sans-serif;
 	font-size:  70px;
 	cursor: pointer;
+	color:red;
 }
 
 table {
@@ -56,37 +64,38 @@ table tr td:last-child {
 	border-right: 0;
 }
 
-/* .endgame {
-  display: none;
-  width: 200px;
-  top: 120px;
-  background-color: rgba(205,133,63, 0.8);
-  position: absolute;
-  left: 50%;
-  margin-left: -100px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-  border-radius: 5px;
-  color: white;
-  font-size: 2em;
-} */
-
 table tr:last-child td{
     border-left: 0;
 }
 
-a{
-padding:5px;
+/* #joker1{
+	margin:0px 250px 0px 0px;
+}
+
+
+#joker2{
+	margin:0px 0px 0px 250px;
+} */
+
+.buttons{
+margin:0px 15px ;
+padding:0px 0px 5px 0px;
 border:rgb(16, 117, 212) 5px solid;
-background:rgb(9, 224, 177) ;
-height: 30px;
-width: 135px;
-font-size:50px;
+background:rgb(0, 60, 83) ;
+height: 50px;
+width: 235px;
+font-size:40px;
 font-family: 'Alegreya SC', serif;
 color: rgb(44, 149, 18);
-text-decoration: none;
 cursor: pointer;
+text-align: center;
+
+}
+
+#resetScore{
+	font-size: 40px;
+	padding:0px 0px 5px 0px;
+
 }
 
 .points{
@@ -113,4 +122,18 @@ margin:0px 10px ;
 
 #gameboard {
 	margin: 50px;
+}
+
+.X{
+	color:purple;
+}
+
+.O{
+	color:rgb(195, 255, 0);
+
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
 }
