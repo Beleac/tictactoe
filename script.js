@@ -88,7 +88,7 @@ function checkbox()
    if(clickedBoxes.length > 1)
 
    {
-      change = confirm('To switch gamemodes the board must be reset');
+      change = confirm(`Switching gamemodes resets the board.                                           Press OK to confirm.`);
    }
 
    else
@@ -131,7 +131,7 @@ function checkbox()
 
    else if(mode == 'hard')
    {
-      this.innerHTML = `<span class= "Z"><img src= "./assets/LegoJokerFace.png" style="width: 50px; height 50px;"></span>`;
+      this.innerHTML = `<span class= XO>XO</span>`;
    }
 
    if(xoro == "X")

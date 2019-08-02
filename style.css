@@ -11,10 +11,15 @@ body{
 	flex-direction:column;
 	align-items:center;
 	justify-content: center;
-	background:rgb(0, 0, 0);
+	background-image: url('https://blog.modernsetups.com/wp-content/uploads/2019/02/dark-purple-gradient-1024x576.png?x97945');
+	background-repeat:no-repeat;
+	background-size:cover;
 }
 
+
+
 h1{
+margin:0;
 font-size:50px;
 font-family: 'Alegreya SC', serif;
 color: rgb(114, 36, 159);
@@ -24,7 +29,7 @@ color: rgb(114, 36, 159);
 #turn{
 	font-size:30px;
 	margin:0px;
-	color: rgb(27, 33, 63);
+	color: rgb(92, 15, 128);
 
 }
 
@@ -121,13 +126,22 @@ margin:0px 10px ;
 }
 
 .O{
-	color:rgb(31, 31, 31);
+	color:rgb(0, 255, 21);
 
+}
+
+.XO{
+	color:purple;
+	font-size:60px;
+}
+
+#mode{
+	margin:10px;
 }
 
 #checkBox{
 	font-size:22px;
-	margin: 55px 0px 0px 20px;
+	margin: 30px 0px 0px 20px;
 	height: 20px;
 	width:20px;
 }
