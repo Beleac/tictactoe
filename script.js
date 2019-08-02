@@ -5,6 +5,7 @@ var
  clickedBoxes = [],
  XPlacement = 0,
  OPlacement = 0,
+ change,
  xwin1 = [],
  xwin2 = [],
  xwin3 = [],
@@ -22,8 +23,9 @@ var
  owin7 = [],
  owin8 = [],
  totalXWins = 0,
- totalOWins = 0;
-
+ totalOWins = 0,
+ mode = 'easy';
+ clickedBoxes.push("")
 
 
 function reset() {
@@ -37,6 +39,7 @@ function reset() {
    XPlacement = "";
    OPlacement = "";
    clickedBoxes = [];
+   clickedBoxes.push("")
    if(letterStart%2 === 0)
    {
       xoro = "X"
@@ -67,11 +70,49 @@ function reset() {
 }
 
 function resetScore(){
-
+var checkReset = confirm('Reset Player X and O Wins?');
+console.log(checkReset);
+if (checkReset == true)
+{
 totalXWins = 0
 totalOWins = 0
 document.getElementById("OPoints").innerHTML = totalOWins;
 document.getElementById("XPoints").innerHTML = totalXWins;
+
+}
+
+}
+
+function checkbox()
+{  
+   if(clickedBoxes.length > 1)
+
+   {
+      change = confirm('To switch gamemodes the board must be reset');
+   }
+
+   else
+   {
+      change = true;
+   }
+
+   if(change == true)
+
+   {
+      reset()
+      if(mode == 'easy')
+      {
+         mode = 'hard'
+         document.getElementById('checkBox').innerHTML='✓'
+      }
+
+       else if(mode == 'hard')
+       {
+       mode = 'easy'
+       document.getElementById('checkBox').innerHTML=''
+      }
+      
+   }    
 
 }
 
@@ -83,8 +124,16 @@ document.getElementById("XPoints").innerHTML = totalXWins;
     { 
    clickedBoxes.push(tableId);
 
-   this.innerHTML = `<span class= ${xoro}>${xoro}</span>`;
-   
+   if(mode == 'easy')
+   {
+      this.innerHTML = `<span class= ${xoro}>${xoro}</span>`;
+   }
+
+   else if(mode == 'hard')
+   {
+      this.innerHTML = `<span class= "Z"><img src= "./assets/LegoJokerFace.png" style="width: 50px; height 50px;"></span>`;
+   }
+
    if(xoro == "X")
    {
    XPlacement = parseInt(tableId);
@@ -213,7 +262,9 @@ owin8.push(OPlacement);
 }
 
 }
+
 document.getElementById("turn").innerHTML = `Player ${xoro} Turn`
+
    function win() {
 
       if(xwin1.length === 3 || xwin2.length === 3 || xwin3.length === 3 || xwin4.length === 3 || xwin5.length === 3 || xwin6.length === 3 || xwin7.length === 3 || xwin8.length === 3)
@@ -233,12 +284,18 @@ document.getElementById("turn").innerHTML = `Player ${xoro} Turn`
          document.getElementById("OPoints").innerHTML = totalOWins;
 
       }
-         
-      }
 
+      if(clickedBoxes.length === 10)
+      {
+         reset();
+         alert("It's A Tie!");
+      }
+         
+      };
    setTimeout(() => {
       win();
-   }, 1000) 
+   }, 500) 
+   
    
    
    
