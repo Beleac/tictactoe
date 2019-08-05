@@ -7,6 +7,7 @@ header{
 }
 
 body{
+	margin: 0px;
 	display: flex;
 	flex-direction:column;
 	align-items:center;
@@ -23,7 +24,7 @@ margin:0;
 font-size:50px;
 font-family: 'Alegreya SC', serif;
 color: rgb(114, 36, 159);
-
+text-align: center;
 }
 
 #turn{
@@ -39,7 +40,7 @@ td {
 	width:  100px;
 	text-align:  center;
 	/* vertical-align:  middle; */
-	font-family:  "Comic Sans MS", cursive, sans-serif;
+	font-family:  "Comic Sans MS", 'Alegreya SC' , sans-serif;
 	font-size:  70px;
 	cursor: pointer;
 	color:red;
@@ -48,8 +49,7 @@ td {
 table {
 	border-collapse: collapse;
 	/* position: absolute; */
-	left: 50%;
-	/* margin-left: -155px; */
+	margin:0px 0px 0px 0% ;
 	top: 50px;
 	/* margin-top:100px; */
 }
